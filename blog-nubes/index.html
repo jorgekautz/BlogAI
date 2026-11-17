@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Por qué las nubes son blancas? | Cielo Azul Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Nubes animadas de fondo -->
+  <div class="cloudfield" aria-hidden="true">
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+  </div>
+
+  <!-- Barra de progreso de lectura -->
+  <div id="progress-bar"></div>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo">☁️ Blog<span>AI</span></h1>
+      <nav>
+        <a href="../index.html" class="nav-link active">Inicio</a>
+        <a href="../blog-estrellas/index.html" class="nav-link">← Estrellas</a>
+        <button id="theme-toggle" title="Cambiar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Buscador -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Buscar artículos...">
+    </div>
+
+    <div class="layout">
+      <!-- Artículo principal -->
+      <article class="post" data-title="nubes blancas grises gotas agua hielo mie dispersión niebla leche cumulonimbus">
+        <span class="badge badge-clouds">Física · Meteorología</span>
+        <h2>¿Por qué las nubes son blancas?</h2>
+        <p class="post-meta">
+          Por <strong>Jorge Kautz</strong> ·
+          <span id="today-date"></span> ·
+          <span id="reading-time">3 min. de lectura</span>
+        </p>
+        <img src="https://volvamosalevangelio.org/wp-content/uploads/2023/10/cloud.jpg?w=900"
+             alt="Nubes blancas en el cielo" class="post-image">
+
+        <div class="post-body">
+          <p>Las nubes parecen algodón blanco flotando en el cielo, pero su color esconde una física fascinante. El secreto está en <strong>cómo dispersan la luz las gotitas de agua</strong>. Paso a paso:</p>
+
+          <ol>
+            <li><strong>¿De qué están hechas las nubes?</strong> De millones de diminutas gotitas de agua (de unas 10-100 micras) y, en las capas altas, cristales de hielo.</li>
+            <li><strong>Dispersión de Mie.</strong> A diferencia de las moléculas de aire —que dispersan casi solo el azul por dispersión de Rayleigh y por eso el cielo es azul— las gotitas de nube son <strong>más grandes que la longitud de onda de la luz visible</strong>. Esto hace que dispersen <strong>todos los colores por igual</strong>.</li>
+            <li><strong>La luz blanca entra blanca y sale blanca.</strong> La luz solar (que contiene todos los colores) entra en la nube, rebota en las gotitas en todas direcciones mezclándose, y llega a tus ojos conservando su mezcla completa: <strong>blanco puro</strong>.</li>
+            <li><strong>¿Por qué algunas nubes son grises?</strong> Cuando una nube es muy gruesa o densa (como un cumulonimbus), la luz es reflejada y absorbida tantas veces en su interior que muy poca logra atravesarla. La parte inferior queda en sombra y la vemos gris, porque te llega poca luz. Si flotas dentro de una nube gris, ¡las gotitas siguen siendo blancas!</li>
+            <li><strong>¿Y al amanecer y atardecer?</strong> Cuando el Sol está bajo, su luz recorre un camino más largo por la atmósfera y pierde sus azules (Rayleigh otra vez). Lo que llega a las nubes es luz roja y anaranjada, tiñéndolas de esos colores espectaculares.</li>
+          </ol>
+
+          <h3>Datos curiosos</h3>
+          <ul>
+            <li>☁️ <strong>La leche es blanca por lo mismo:</strong> las grasas y proteínas dispersan toda la luz de igual forma, sin absorberla. Es una "nube líquida".</li>
+            <li>🌫️ <strong>La niebla es blanca por el mismo efecto</strong>... de hecho, una nube es simplemente niebla que no toca el suelo.</li>
+            <li>💧 En el fondo, la pura agua es ligeramente azul verdosa (absunbe un poco de rojo), pero en las gotitas de nube la luz rebota tan rápido que ese efecto apenas se nota.</li>
+          </ul>
+
+          <blockquote class="fun-fact fun-fact-clouds">
+            💡 <strong>Resumen:</strong> cielo azul = moléculas diminutas (Rayleigh) + arcoíris = gotas que actúan como prismas + nubes blancas = gotas que dispersan todo por igual (Mie). ¡Tres fenómenos, una misma protagonista: la luz!
+          </blockquote>
+        </div>
+
+        <div class="post-actions">
+          <button id="like-btn" class="btn">👍 Me gusta (<span id="like-count">0</span>)</button>
+          <button class="btn" id="share-btn">🔗 Compartir</button>
+        </div>
+
+        <!-- Comentarios -->
+        <section class="comments">
+          <h3>Comentarios (<span id="comment-count">0</span>)</h3>
+          <form id="comment-form">
+            <input type="text" id="comment-name" placeholder="Tu nombre" required>
+            <textarea id="comment-text" placeholder="Escribe un comentario..." required></textarea>
+            <button type="submit" class="btn btn-primary">Comentar</button>
+          </form>
+          <div id="comments-list"></div>
+        </section>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="widget">
+          <h3>Artículos relacionados</h3>
+          <ul id="related-posts">
+            <li onclick="location.href='../blog-cielo-azul/index.html'" data-title="por qué el cielo es azul rayleigh">🌤️ ¿Por qué el cielo es azul?</li>
+            <li onclick="location.href='../blog-arcoiris/index.html'" data-title="arcoíris refracción reflexión dispersión gotas lluvia">🌈 ¿Por qué se forman los arcoíris?</li>
+            <li onclick="location.href='../blog-estrellas/index.html'" data-title="estrellas titilan centelleo atmósfera refracción turbulencia">✨ ¿Por qué titilan las estrellas?</li>
+            <li onclick="location.href='../blog-luna/index.html'" data-title="luna roja eclipse sangre">🌕 La "luna de sangre": eclipses lunares</li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3>Suscríbete</h3>
+          <form id="subscribe-form">
+            <input type="email" id="subscribe-email" placeholder="tu@correo.com" required>
+            <button type="submit" class="btn btn-primary">Suscribirme</button>
+          </form>
+          <p id="subscribe-msg" class="msg"></p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> BlogAI · Ciencia explicada fácil</p>
+  </footer>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

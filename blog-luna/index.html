@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La "luna de sangre": eclipses lunares | Cielo Azul Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Luna brillante animada de fondo -->
+  <div class="moonfield" aria-hidden="true">
+    <div class="moon"></div>
+  </div>
+
+  <!-- Barra de progreso de lectura -->
+  <div id="progress-bar"></div>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo">🌕 Blog<span>AI</span></h1>
+      <nav>
+        <a href="../index.html" class="nav-link active">Inicio</a>
+        <a href="../blog-nubes/index.html" class="nav-link">← Nubes</a>
+        <button id="theme-toggle" title="Cambiar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Buscador -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Buscar artículos...">
+    </div>
+
+    <div class="layout">
+      <!-- Artículo principal -->
+      <article class="post" data-title="luna roja eclipse sangre umbra penumbra refracción rayleigh atardecer polvo volcánico órbita inclinada">
+        <span class="badge badge-moon">Astronomía · Óptica</span>
+        <h2>La "luna de sangre": eclipses lunares</h2>
+        <p class="post-meta">
+          Por <strong>Jorge Kautz</strong> ·
+          <span id="today-date"></span> ·
+          <span id="reading-time">3 min. de lectura</span>
+        </p>
+        <img src="https://novacomunicaciones.com.ar/wp-content/uploads/2025/03/Pnr9jEr_E_1256x620__1.jpg?w=900"
+             alt="Luna de sangre durante un eclipse lunar" class="post-image">
+
+        <div class="post-body">
+          <p>Durante un eclipse lunar total, la Luna no desaparece en la oscuridad: se enciende en un rojo intenso que le ganó el apodo de <strong>"luna de sangre"</strong>. Lo que parece un evento sobrenatural es en realidad física pura, y conecta todos los artículos de este blog. Paso a paso:</p>
+
+          <ol>
+            <li><strong>¿Cuándo ocurre?</strong> Un eclipse lunar pasa cuando la <strong>Tierra se interpone exactamente entre el Sol y la Luna</strong>, proyectando su sombra sobre ella. Solo puede ocurrir en <strong>Luna Llena</strong>, cuando los tres cuerpos quedan alineados (lo que los astrónomos llaman <em>sizigia</em>).</li>
+            <li><strong>Las dos sombras.</strong> La sombra de la Tierra tiene dos zonas: la <strong>penumbra</strong>, un borde tenue donde solo se tapa parte del Sol (produce un eclipse penumbral, casi imperceptible), y la <strong>umbra</strong>, la zona oscura central. Si la Luna entra solo parcialmente en la umbra, es un eclipse parcial; si entra del todo, un <strong>eclipse total</strong>.</li>
+            <li><strong>¿Por qué NO desaparece?</strong> Porque la luz solar que roza el borde de la Tierra se <strong>refracta</strong> (dobla) al atravesar nuestra atmósfera, como a través de una lente gigante, y se curva "hacia dentro", llegando a la Luna. Sin atmósfera, la Luna simplemente se apagaría.</li>
+            <li><strong>¿Por qué es roja?</strong> Aquí aparece la estrella del blog: la <strong>dispersión de Rayleigh</strong>. La atmósfera dispersa y elimina casi toda la luz azul del haz solar (lo mismo que vuelve rojos los atardeceres), dejando pasar sobre todo las longitudes de onda <strong>rojas y anaranjadas</strong>. En otras palabras: la luna de sangre es la luz de <strong>todos los amaneceres y atardeceres de la Tierra proyectados sobre la Luna</strong>. 🌅</li>
+            <li><strong>¿Por qué varía el tono?</strong> Depende de lo que flote en nuestra atmósfera: polvo, cenizas y nubes filtran más luz. Tras grandes erupciones volcánicas, las lunas de sangre quedan mucho <strong>más oscuras</strong>, casi negras; con aire limpio brillan en naranjas y cobres vivos.</li>
+          </ol>
+
+          <h3>¿Por qué no hay eclipses todos los meses?</h3>
+          <ul>
+            <li>La órbita de la Luna está <strong>inclinada unos 5°</strong> respecto a la de la Tierra alrededor del Sol.</li>
+            <li>La mayoría de las Lunas Llenas ocurren "por encima" o "por debajo" de la sombra terrestre.</li>
+            <li>Solo cuando la Luna Llena coincide cerca de los puntos donde ambas órbitas se cruzan (<strong>nodos</strong>) se produce el eclipse: unos 2 a 4 al año, y solo algunos totales.</li>
+          </ul>
+
+          <blockquote class="fun-fact fun-fact-moon">
+            💡 <strong>Datos curiosos:</strong>
+            <ul>
+              <li>👀 Un eclipse lunar es <strong>seguro de ver a simple vista</strong> (a diferencia de los solares) y se ve desde medio planeta entero: donde sea de noche.</li>
+              <li>🌍 Si estuvieras en la Luna durante el eclipse, verías algo aún más espectacular: la Tierra como un disco negro rodeado por un <strong>anillo de fuego</strong> (todos los atardeceres del mundo a la vez).</li>
+              <li>🌡️ La superficie lunar pasa de 127°C a -173°C durante un eclipse total: un "invierno" instantáneo.</li>
+              <li>📜 Muchas culturas antiguas interpretaban la luna de sangre como presagio; hoy sabemos que es solo luz filtrada de los crepúsculos de nuestro planeta.</li>
+            </ul>
+          </blockquote>
+        </div>
+
+        <div class="post-actions">
+          <button id="like-btn" class="btn">👍 Me gusta (<span id="like-count">0</span>)</button>
+          <button class="btn" id="share-btn">🔗 Compartir</button>
+        </div>
+
+        <!-- Comentarios -->
+        <section class="comments">
+          <h3>Comentarios (<span id="comment-count">0</span>)</h3>
+          <form id="comment-form">
+            <input type="text" id="comment-name" placeholder="Tu nombre" required>
+            <textarea id="comment-text" placeholder="Escribe un comentario..." required></textarea>
+            <button type="submit" class="btn btn-primary">Comentar</button>
+          </form>
+          <div id="comments-list"></div>
+        </section>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="widget">
+          <h3>Artículos relacionados</h3>
+          <ul id="related-posts">
+            <li onclick="location.href='../blog-cielo-azul/index.html'" data-title="por qué el cielo es azul rayleigh">🌤️ ¿Por qué el cielo es azul?</li>
+            <li onclick="location.href='../blog-arcoiris/index.html'" data-title="arcoíris refracción reflexión dispersión gotas lluvia">🌈 ¿Por qué se forman los arcoíris?</li>
+            <li onclick="location.href='../blog-estrellas/index.html'" data-title="estrellas titilan centelleo atmósfera refracción turbulencia">✨ ¿Por qué titilan las estrellas?</li>
+            <li onclick="location.href='../blog-nubes/index.html'" data-title="nubes blancas grises gotas agua hielo mie dispersión">☁️ ¿Por qué las nubes son blancas?</li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3>Suscríbete</h3>
+          <form id="subscribe-form">
+            <input type="email" id="subscribe-email" placeholder="tu@correo.com" required>
+            <button type="submit" class="btn btn-primary">Suscribirme</button>
+          </form>
+          <p id="subscribe-msg" class="msg"></p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> BlogAI · Ciencia explicada fácil</p>
+  </footer>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

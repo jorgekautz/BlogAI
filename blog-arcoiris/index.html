@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Por qué se forman los arcoíris? | Cielo Azul Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra de progreso de lectura -->
+  <div id="progress-bar"></div>
+
+  <header class="site-header rainbow-header">
+    <div class="container header-content">
+      <h1 class="logo">🌈 Blog<span>AI</span></h1>
+      <nav>
+        <a href="../index.html" class="nav-link active">Inicio</a>
+        <a href="../blog-cielo-azul/index.html" class="nav-link">← Cielo azul</a>
+        <button id="theme-toggle" title="Cambiar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Buscador -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Buscar artículos...">
+    </div>
+
+    <div class="layout">
+      <!-- Artículo principal -->
+      <article class="post" data-title="arcoíris arco iris refracción reflexión dispersión gotas lluvia prisma">
+        <span class="badge badge-rainbow">Física · Óptica</span>
+        <h2>¿Por qué se forman los arcoíris?</h2>
+        <p class="post-meta">
+          Por <strong>Jorge Kautz</strong> ·
+          <span id="today-date"></span> ·
+          <span id="reading-time">3 min. de lectura</span>
+        </p>
+        <img src="https://wanderlust.com.ar/wp-content/uploads/2019/04/Arco-Iris-WANDERLUST-WEB.jpg?w=900"
+             alt="Arcoíris en el cielo" class="post-image">
+
+        <div class="post-body">
+          <p>Los arcoíris se forman por la combinación de tres fenómenos ópticos que ocurren cuando la luz del Sol atraviesa las gotas de lluvia: <strong>refracción, reflexión interna y dispersión</strong>. Aquí la explicación paso a paso:</p>
+
+          <ol>
+            <li><strong>Refracción (entrada a la gota).</strong> Cuando un rayo de luz solar entra en una gota de agua, pasa del aire (menos denso) al agua (más densa) y se "dobla". Al entrar, la luz blanca se <strong>dispersa</strong>: cada color se desvía un poco diferente porque viaja a distinta velocidad dentro del agua. El violeta se dobla más que el rojo.</li>
+            <li><strong>Dispersión.</strong> Dentro de la gota, la luz blanca se "descompone" en sus colores, igual que en un prisma. Es un principio similar al del color del cielo, pero aquí es por refracción, no por dispersión molecular.</li>
+            <li><strong>Reflexión interna.</strong> Al llegar al borde interior de la gota, la luz <strong>rebota como en un espejo</strong> y sale de nuevo hacia el aire. Sin esta reflexión, la luz seguiría de largo y no veríamos arcoíris.</li>
+            <li><strong>Segunda refracción (salida de la gota).</strong> Al salir, la luz vuelve a doblarse y se separa aún más por colores. Cada gota actúa como un pequeño prisma que envía un solo color hacia tu ojo en una dirección precisa.</li>
+          </ol>
+
+          <h3>¿Por qué vemos un arco y no un círculo completo?</h3>
+          <ul>
+            <li>Todos los rayos que llegan a tu ojo desde gotas situadas a un ángulo de <strong>~42°</strong> respecto a la línea opuesta al Sol forman el arco rojo exterior, y los que llegan a <strong>~40°</strong> forman el violeta interior.</li>
+            <li>El suelo "corta" la mitad inferior del círculo, por eso normalmente vemos un arco. Desde un avión o una montaña, ¡puede verse el círculo completo! 🛩️</li>
+          </ul>
+
+          <h3>Reglas para ver un arcoíris</h3>
+          <ul>
+            <li>Debe estar lloviendo (o haber neblina/cascadas) <strong>frente a ti</strong>.</li>
+            <li>El Sol debe estar <strong>detrás de ti</strong> y relativamente bajo (mañana o tarde).</li>
+          </ul>
+
+          <blockquote class="fun-fact fun-fact-rainbow">
+            💡 <strong>Datos curiosos:</strong>
+            <ul>
+              <li>Un <strong>segundo arcoíris</strong> se produce por dos reflexiones internas dentro de la gota: es más débil y tiene los <strong>colores invertidos</strong> (rojo en el interior).</li>
+              <li>Entre ambos arcos se forma una banda oscura llamada <strong>banda de Alejandro</strong>.</li>
+              <li>El arcoíris no tiene una ubicación física: es un fenómeno dependiente del observador —dos personas ven "su propio" arcoíris con gotas diferentes.</li>
+            </ul>
+          </blockquote>
+        </div>
+
+        <div class="post-actions">
+          <button id="like-btn" class="btn">👍 Me gusta (<span id="like-count">0</span>)</button>
+          <button class="btn" id="share-btn">🔗 Compartir</button>
+        </div>
+
+        <!-- Comentarios -->
+        <section class="comments">
+          <h3>Comentarios (<span id="comment-count">0</span>)</h3>
+          <form id="comment-form">
+            <input type="text" id="comment-name" placeholder="Tu nombre" required>
+            <textarea id="comment-text" placeholder="Escribe un comentario..." required></textarea>
+            <button type="submit" class="btn btn-primary">Comentar</button>
+          </form>
+          <div id="comments-list"></div>
+        </section>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="widget">
+          <h3>Artículos relacionados</h3>
+          <ul id="related-posts">
+            <li onclick="location.href='../blog-cielo-azul/index.html'" data-title="por qué el cielo es azul rayleigh">🌤️ ¿Por qué el cielo es azul?</li>
+            <li onclick="location.href='../blog-estrellas/index.html'" data-title="estrellas brillan titilan atmósfera">✨ ¿Por qué titilan las estrellas?</li>
+            <li onclick="location.href='../blog-nubes/index.html'" data-title="nubes blancas grises gotas">☁️ ¿Por qué las nubes son blancas?</li>
+            <li onclick="location.href='../blog-luna/index.html'" data-title="luna roja eclipse sangre">🌕 La "luna de sangre": eclipses lunares</li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3>Suscríbete</h3>
+          <form id="subscribe-form">
+            <input type="email" id="subscribe-email" placeholder="tu@correo.com" required>
+            <button type="submit" class="btn btn-primary">Suscribirme</button>
+          </form>
+          <p id="subscribe-msg" class="msg"></p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> BlogAI · Ciencia explicada fácil</p>
+  </footer>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

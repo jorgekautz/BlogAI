@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cielo Azul | Blog de Ciencia</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Barra de progreso de lectura -->
+  <div id="progress-bar"></div>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo">🌤️ Blog<span>AI</span></h1>
+      <nav>
+        <a href="../index.html" class="nav-link active">Inicio</a>
+        <button id="theme-toggle" title="Cambiar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Buscador -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Buscar artículos...">
+    </div>
+
+    <div class="layout">
+      <!-- Artículo principal -->
+      <article class="post" data-title="por qué el cielo es azul rayleigh">
+        <span class="badge">Física · Óptica</span>
+        <h2>¿Por qué el cielo es azul?</h2>
+        <p class="post-meta">
+          Por <strong>Jorge Kautz</strong> ·
+          <span id="today-date"></span> ·
+          <span id="reading-time">3 min. de lectura</span>
+        </p>
+        <img src="https://fisiquimicamente.com/blog/2022/07/29/por-que-vemos-el-cielo-azul/featured_hu_bc18e9a52a4e1c66.webp?w=900"
+             alt="Cielo azul" class="post-image">
+
+        <div class="post-body">
+          <p>El cielo es azul por un fenómeno llamado <strong>dispersión de Rayleigh</strong>. Aquí va la explicación paso a paso:</p>
+
+          <ol>
+            <li><strong>La luz del Sol parece blanca</strong>, pero en realidad está compuesta por todos los colores del espectro (rojo, naranja, amarillo, verde, azul, violeta).</li>
+            <li><strong>Al entrar en la atmósfera</strong>, la luz choca con las moléculas de aire (nitrógeno y oxígeno). Estas moléculas son mucho más pequeñas que la longitud de onda de la luz visible, y dispersan la luz de manera desigual.</li>
+            <li><strong>Los colores con longitudes de onda más cortas se dispersan mucho más.</strong> La luz azul se dispersa en todas direcciones unas 10 veces más que la luz roja. Así, cuando miras cualquier parte del cielo, ves esa luz azul dispersada.</li>
+            <li><strong>¿Por qué no es violeta?</strong> La luz violeta se dispersa aún más, pero el Sol emite menos violeta, la atmósfera absorbe parte de él y nuestros ojos son menos sensibles a ese color.</li>
+            <li><strong>¿Por qué se pone rojo al atardecer?</strong> Con el Sol bajo, la luz recorre un camino más largo, el azul se dispersa tantas veces que "se pierde", y llegan a tus ojos las longitudes de onda más largas: rojos y naranjas.</li>
+          </ol>
+
+          <blockquote class="fun-fact">
+            💡 <strong>Dato curioso:</strong> si no hubiera atmósfera, como en la Luna, el cielo se vería negro incluso de día, porque no habría moléculas que dispersaran la luz.
+          </blockquote>
+        </div>
+
+        <div class="post-actions">
+          <button id="like-btn" class="btn">👍 Me gusta (<span id="like-count">0</span>)</button>
+          <button class="btn" id="share-btn">🔗 Compartir</button>
+        </div>
+
+        <!-- Comentarios -->
+        <section class="comments">
+          <h3>Comentarios (<span id="comment-count">0</span>)</h3>
+          <form id="comment-form">
+            <input type="text" id="comment-name" placeholder="Tu nombre" required>
+            <textarea id="comment-text" placeholder="Escribe un comentario..." required></textarea>
+            <button type="submit" class="btn btn-primary">Comentar</button>
+          </form>
+          <div id="comments-list"></div>
+        </section>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="widget">
+          <h3>Artículos relacionados</h3>
+          <ul id="related-posts">
+            <li onclick="location.href='../blog-arcoiris/index.html'" data-title="arcoíris luz refracción">🌈 ¿Por qué se forman los arcoíris?</li>
+            <li onclick="location.href='../blog-estrellas/index.html'" data-title="estrellas brillan titilan atmósfera">✨ ¿Por qué titilan las estrellas?</li>
+            <li onclick="location.href='../blog-luna/index.html'" data-title="luna roja eclipse sangre">🌕 La "luna de sangre": eclipses lunares</li>
+            <li onclick="location.href='../blog-nubes/index.html'" data-title="nubes blancas grises gotas">☁️ ¿Por qué las nubes son blancas?</li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3>Suscríbete</h3>
+          <form id="subscribe-form">
+            <input type="email" id="subscribe-email" placeholder="tu@correo.com" required>
+            <button type="submit" class="btn btn-primary">Suscribirme</button>
+          </form>
+          <p id="subscribe-msg" class="msg"></p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> BlogAI · Ciencia explicada fácil</p>
+  </footer>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

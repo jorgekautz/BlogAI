@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cielo Azul Blog · La ciencia del cielo explicada fácil</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Fondo animado de partículas de luz -->
+  <div class="lightfield" aria-hidden="true"></div>
+
+  <!-- Barra de progreso -->
+  <div id="progress-bar"></div>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo">✨ Blog<span>AI</span></h1>
+      <nav>
+        <a href="#articulos" class="nav-link">Artículos</a>
+        <a href="#suscripcion" class="nav-link">Suscríbete</a>
+        <button id="theme-toggle" title="Cambiar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>La luz es la protagonista</h2>
+      <p class="hero-sub">
+        Cinco preguntas, una sola respuesta. El cielo azul, los arcoíris, las estrellas
+        titilantes, las nubes blancas y la luna de sangre son la misma historia:
+        <strong>luz viajando a través de nuestra atmósfera</strong>.
+      </p>
+      <a href="#articulos" class="btn btn-primary btn-big">Empezar a leer 👇</a>
+      <div class="hero-stats">
+        <div class="stat"><span id="stat-posts">5</span><small>Artículos</small></div>
+        <div class="stat"><span>15 min.</span><small>Tiempo</small></div>
+        <div class="stat"><span>100%</span><small>Gratis y sin ads.</small></div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container" id="articulos">
+    <!-- Buscador -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Buscar en la colección... (ej: rayleigh, gotas, atmósfera)">
+    </div>
+
+    <!-- Las tarjetas se generan con JS -->
+    <div class="cards-grid" id="cards-grid"></div>
+    <p id="no-results" class="msg">No se encontraron artículos para tu búsqueda. 🔍</p>
+
+    <!-- Hilo conductor -->
+    <section class="thread">
+      <h3>🧵 El hilo conductor</h3>
+      <p>
+        Lee la colección en orden: el <strong>cielo azul</strong> introduce la dispersión de Rayleigh,
+        el <strong>arcoíris</strong> suma refracción y reflexión, las <strong>estrellas</strong> revelan
+        una atmósfera turbulenta, las <strong>nubes</strong> presentan otro tipo de dispersión (Mie),
+        y la <strong>luna de sangre</strong> lo une todo: ¡son los atardeceres de la Tierra proyectados
+        sobre la Luna! 🌅🌕
+      </p>
+    </section>
+
+    <!-- Suscripción -->
+    <section class="subscribe-section" id="suscripcion">
+      <h3>📬 Suscríbete al boletín</h3>
+      <form id="subscribe-form">
+        <input type="email" id="subscribe-email" placeholder="tu@correo.com" required>
+        <button type="submit" class="btn btn-primary">Suscribirme</button>
+      </form>
+      <p id="subscribe-msg" class="msg"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> BlogAI · Ciencia explicada fácil</p>
+  </footer>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

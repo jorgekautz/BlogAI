@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¿Por qué titilan las estrellas? | Cielo Azul Blog</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Estrellas animadas de fondo -->
+  <div class="starfield" aria-hidden="true"></div>
+
+  <!-- Barra de progreso de lectura -->
+  <div id="progress-bar"></div>
+
+  <header class="site-header">
+    <div class="container header-content">
+      <h1 class="logo">🌟 Blog<span>AI</span></h1>
+      <nav>
+        <a href="../index.html" class="nav-link active">Inicio</a>
+        <a href="../blog-arcoiris/index.html" class="nav-link">← Arcoiris</a>
+        <button id="theme-toggle" title="Cambiar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Buscador -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Buscar artículos...">
+    </div>
+
+    <div class="layout">
+      <!-- Artículo principal -->
+      <article class="post" data-title="estrellas titilan centelleo atmósfera refracción turbulencia planetas hubble óptica adaptativa">
+        <span class="badge badge-stars">Astronomía · Óptica</span>
+        <h2>¿Por qué titilan las estrellas?</h2>
+        <p class="post-meta">
+          Por <strong>Jorge Kautz</strong> ·
+          <span id="today-date"></span> ·
+          <span id="reading-time">3 min. de lectura</span>
+        </p>
+        <img src="https://cdn.shopify.com/s/files/1/0831/9408/5704/files/Horsead-and-Flame-Nebulae.jpg?w=900"
+             alt="Cielo estrellado" class="post-image">
+
+        <div class="post-body">
+          <p>Cuando miras el cielo nocturno, las estrellas parecen parpadear y hasta cambiar de color. Ese efecto se llama <strong>centelleo astronómico</strong>, y la sorpresa es esta: <strong>el titileo no viene de la estrella, sino de nuestra propia atmósfera</strong>. Explicado paso a paso:</p>
+
+          <ol>
+            <li><strong>La luz llega como un punto.</strong> Las estrellas están tan increíblemente lejos que, desde la Tierra, se ven como una fuente de luz puntual: un solo rayo delgado de luz blanca viaja hasta nosotros.</li>
+            <li><strong>La atmósfera no es uniforme.</strong> Está formada por capas de aire con diferentes temperaturas y densidades. El aire caliente es menos denso que el frío, y la luz viaja a distintas velocidades en cada uno.</li>
+            <li><strong>Refracción constante.</strong> Al pasar de una capa a otra, el rayo de luz se <strong>refracta</strong> (se dobla) en pequeñas cantidades, cambiando la dirección en la que llega a tus ojos.</li>
+            <li><strong>Turbulencia.</strong> Las corrientes de aire mueven estas capas continuamente, desviando el rayo millones de veces por segundo. Tu cerebro percibe esos cambios como <strong>parpadeos, desplazamientos y variaciones de color</strong>.</li>
+            <li><strong>¿Por qué a veces se ven de colores?</strong> Cada color (longitud de onda) se refracta un poco distinto, así que en ciertos momentos tu ojo capta más un color que otro: por eso Sirio puede verse azul, rojo o verde.</li>
+          </ol>
+
+          <h3>¿Y por qué los planetas casi no titilan?</h3>
+          <ul>
+            <li>Los planetas están mucho más cerca y, aunque a simple ojo parecen puntos, en realidad son <strong>pequeños discos</strong> de luz.</li>
+            <li>Un disco emite muchos rayos que atraviesan zonas de aire distintas: cuando unos se desvían, otros no, y el efecto <strong>se promedia</strong>. Por eso Júpiter o Venus brillan con luz constante.</li>
+            <li>Excepción: cuando un planeta está muy cerca del horizonte, su luz cruza más atmósfera y también puede titilar.</li>
+          </ul>
+
+          <h3>¿Cómo lo resuelven los astrónomos?</h3>
+          <ul>
+            <li>Poniendo telescopios <strong>en el espacio</strong> (como el Hubble o el James Webb), fuera de la atmósfera.</li>
+            <li>Con <strong>óptica adaptativa</strong>: espejos deformables controlados por láser que corrigen la distorsión del aire en tiempo real, millones de veces por segundo.</li>
+          </ul>
+
+          <blockquote class="fun-fact fun-fact-stars">
+            💡 <strong>Datos curiosos:</strong>
+            <ul>
+              <li>Cuanto <strong>más cerca del horizonte</strong> está una estrella, más titila, porque su luz atraviesa un espesor mayor de atmósfera turbulenta.</li>
+              <li>Los astrónomos miden la "calidad" del cielo nocturno con un índice llamado <strong>seeing</strong>: cuanto menor, más estables son las imágenes.</li>
+              <li>El Sol <strong>nunca titila</strong> porque su disco es enorme comparado con una estrella lejana: su luz se promedia de forma natural.</li>
+            </ul>
+          </blockquote>
+        </div>
+
+        <div class="post-actions">
+          <button id="like-btn" class="btn">👍 Me gusta (<span id="like-count">0</span>)</button>
+          <button class="btn" id="share-btn">🔗 Compartir</button>
+        </div>
+
+        <!-- Comentarios -->
+        <section class="comments">
+          <h3>Comentarios (<span id="comment-count">0</span>)</h3>
+          <form id="comment-form">
+            <input type="text" id="comment-name" placeholder="Tu nombre" required>
+            <textarea id="comment-text" placeholder="Escribe un comentario..." required></textarea>
+            <button type="submit" class="btn btn-primary">Comentar</button>
+          </form>
+          <div id="comments-list"></div>
+        </section>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="widget">
+          <h3>Artículos relacionados</h3>
+          <ul id="related-posts">
+            <li onclick="location.href='../blog-cielo-azul/index.html'" data-title="por qué el cielo es azul rayleigh">🌤️ ¿Por qué el cielo es azul?</li>
+            <li onclick="location.href='../blog-arcoiris/index.html'" data-title="arcoíris refracción reflexión dispersión gotas lluvia">🌈 ¿Por qué se forman los arcoíris?</li>
+            <li onclick="location.href='../blog-nubes/index.html'" data-title="nubes blancas grises gotas">☁️ ¿Por qué las nubes son blancas?</li>
+            <li onclick="location.href='../blog-luna/index.html'" data-title="luna roja eclipse sangre">🌕 La "luna de sangre": eclipses lunares</li>
+          </ul>
+        </div>
+        <div class="widget">
+          <h3>Suscríbete</h3>
+          <form id="subscribe-form">
+            <input type="email" id="subscribe-email" placeholder="tu@correo.com" required>
+            <button type="submit" class="btn btn-primary">Suscribirme</button>
+          </form>
+          <p id="subscribe-msg" class="msg"></p>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> BlogAI · Ciencia explicada fácil</p>
+  </footer>
+
+  <div id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
